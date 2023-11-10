@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design the grid-codewithharry</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI';
+        font-size: 21px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 48px;
+        align-items: center;
+        margin: 33px;
+        cursor: pointer;
+        padding: 0px 81px 0px 81px;
+    }
+
+    li {
+        list-style-type: none;
+        display: flex;
+        align-items: end;
+    }
+
+    .img1 {
+        height: 86px;
+        width: 246px;
+    }
+
+    .items {
+        flex-grow: 1;
+    }
+
+    .img2 {
+        height: 31px;
+        width: 31px;
+    }
+
+    svg {
+        padding: 0px 6px;
+    }
+
+    .body1 {
+        padding: 113px 0px 0px 0px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+    h1 {
+        display: inline;
+        font-size: 58px;
+    }
+
+     
+    .yer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .para_one {
+        font-size: 37px;
+        padding: 62px 142px 0px 142px;
+    }
+
+    .button1 {
+        height: 83px;
+        width: 430px;
+        color: white;
+        background-color: #1fd7ce;
+        cursor: pointer;
+        border: none;
+        border-radius: 0.4em;
+        font-weight: 900;
+    }
+
+    .body2 {
+        display: flex;
+        align-items: center;
+        margin: 127px 0px 0px 156px;
+        gap: 25px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-rows: [row1]350px [row2]350px [row3]350px [row4]350px;
+        grid-template-columns: [col1]500px [col2]500px [col3]500px;
+        justify-content: center;
+        margin-top: 94px;
+        align-items: center;
+        justify-items: center;
+
+        flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 46px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contents {
+        height: 266px;
+        width: 477px;
+        background-color: rgb(245, 248, 235);
+        border-radius: 0.4em;
+    }
+
+    .btn2 {
+        text-decoration: none;
+        background-color: #1fd7ce;
+        border: none;
+        height: 48px;
+        border-radius: 0.4em;
+        width: 196px;
+    }
+
+    .btn3 {
+        text-decoration: none;
+        background-color: #a991ea;
+        border: none;
+        height: 48px;
+        border-radius: 0.4em;
+        width: 196px;
+    }
+
+    .h1 {
+        font-weight: 800;
+        font-size: 28px;
+    }
+
+    .link {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+    }
+
+    .ha {
+        display: flex;
+        row-gap: 6px;
+        gap: 30px;
+    }
+
+    .hai {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        align-items: center;
+    }
+
+
+    .item1 {
+        grid-row: row1/row2;
+        grid-column: col1/col2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .item2 {
+        grid-row: row1/row2;
+        grid-column: col2/col3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .item3 {
+        grid-row: row1/row2;
+        grid-column: col3/col4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .item4 {
+        grid-row: row2/row3;
+        grid-column: col1/col2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .item5 {
+        grid-row: row2/row3;
+        grid-column: col2/col3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .item6 {
+        grid-row: row2/row3;
+        grid-column: col3/col4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .item7 {
+        grid-row: row3/row4;
+        grid-column: col1/col2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .item8 {
+        grid-row: row3/row4;
+        grid-column: col2/col3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .item9 {
+        grid-row: row3/row4;
+        grid-column: col3/col4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .item10 {
+        grid-row: row4/row5;
+        grid-column: col1/col2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <!-- Design the body of this website:
+         https://bit.ly/UltraEdit-CWH -->
+    <header>
+        <nav>
+            <ul>
+                <li class="items"><img class="img1"
+                        src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png" alt="">
+                </li>
+                <li><span>Products</span> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li><span>Pricing</span> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li><span>Resources</span> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li><span>About us</span> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                            stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li><img class="img2" src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="body1">
+            <div class="yer">
+            <h1>Download UltraEdit for Windows</h1>
+            <span class="img3"><img style="height: 45px;"
+                    src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt=""></span>
+                </div>        
+            <p class="para_one">Download and try UltraEdit before you buy it! This download includes the full Windows
+                version of the text editor.</p>
+            <div style="padding-top: 60px;"><button class="button1">DOWNLOAD MAC OR LINUX VERSION</button></div>
+        </div>
+        <div class="body2">
+            <span><img style="height: 80px;" src="https://www.ultraedit.com/wp-content/uploads/2022/11/UE.png"
+                    alt=""></span>
+            <h2 style="font-size:40px;">Download UltraEdit</h2>
+            <small class="para_two">v2023.1(released 08/16/2023) | Hotfix</small>
+        </div>
+        <div class="grid">
+            <div class="contents item1">
+                <div class="h1">English</div>
+                <div class="ha">
+                    <span><button class="btn2"><a class="link" href="ue_english.exe">Download
+                                32-bit</a></button></span>
+                    <span><button class="btn3"><a class="link" href="ue_english.exe">Download
+                                64-bit</a></button></span>
+                </div>
+
+            </div>
+
+            <div class="contents item2">
+                <div class="hai">
+                    <div class="h1">Deutsch</div>
+                    <small class="h2">German</small>
+                </div>
+                <div class="ha">
+                    <span><button class="btn2"><a class="link" href="ue_english.exe">Download
+                                32-bit</a></button></span>
+                    <span><button class="btn3"><a class="link" href="ue_english.exe">Download
+                                64-bit</a></button></span>
+                </div>
+            </div>
+
+
+            <div class="contents item3">
+                <div class="hai">
+                    <div class="h1">Italiano</div>
+                    <small class="h2">Italian</small>
+                </div>
+                <div class="ha">
+                    <span><button class="btn2"><a class="link" href="ue_english.exe">Download
+                                32-bit</a></button></span>
+                    <span><button class="btn3"><a class="link" href="ue_english.exe">Download
+                                64-bit</a></button></span>
+                </div>
+            </div>
+
+
+            <div class="contents item4">
+                <div class="hai">
+                    <div class="h1">Español</div>
+                    <small class="h2">Spanish</small>
+                </div>
+                <div class="ha">
+                    <span><button class="btn2"><a class="link" href="ue_english.exe">Download
+                                32-bit</a></button></span>
+                    <span><button class="btn3"><a class="link" href="ue_english.exe">Download
+                                64-bit</a></button></span>
+                </div>
+            </div>
+
+            <div class="contents item5">
+                <div class="hai">
+                    <div class="h1">français</div>
+                    <small class="h2">French</small>
+                </div>
+                <div class="ha">
+                    <span><button class="btn2"><a class="link" href="ue_english.exe">Download
+                                32-bit</a></button></span>
+                    <span><button class="btn3"><a class="link" href="ue_english.exe">Download
+                                64-bit</a></button></span>
+                </div>
+            </div>
+
+            <div class="contents item6">
+                <div class="hai">
+                    <div class="h1">Português brasileiro</div>
+                    <small class="h2">Brazilian Portuguese</small>
+                </div>
+                <div class="ha">
+                    <span><button class="btn2"><a class="link" href="ue_english.exe">Download
+                                32-bit</a></button></span>
+                    <span><button class="btn3"><a class="link" href="ue_english.exe">Download
+                                64-bit</a></button></span>
+                </div>
+            </div>
+
+            <div class="contents item7">
+                <div class="hai">
+                    <div class="h1">日本</div>
+                    <small class="h2">Japanese</small>
+                </div>
+                <div class="ha">
+                    <span><button class="btn2"><a class="link" href="ue_english.exe">Download
+                                32-bit</a></button></span>
+                    <span><button class="btn3"><a class="link" href="ue_english.exe">Download
+                                64-bit</a></button></span>
+                </div>
+            </div>
+
+            <div class="contents item8">
+                <div class="hai">
+                    <div class="h1">한국어</div>
+                    <small class="h2">Korean</small>
+                </div>
+                <div class="ha">
+                    <span><button class="btn2"><a class="link" href="ue_english.exe">Download
+                                32-bit</a></button></span>
+                    <span><button class="btn3"><a class="link" href="ue_english.exe">Download
+                                64-bit</a></button></span>
+                </div>
+            </div>
+
+            <div class="contents item9">
+                <div class="hai">
+                    <div class="h1">中国</div>
+                    <small class="h2">Chinese</small>
+                </div>
+                <div class="ha">
+                    <span><button class="btn2"><a class="link" href="ue_english.exe">Download
+                                32-bit</a></button></span>
+                    <span><button class="btn3"><a class="link" href="ue_english.exe">Download
+                                64-bit</a></button></span>
+                </div>
+            </div>
+
+            <div class="contents item10">
+                <div class="hai">
+                    <div class="h1">中國</div>
+                    <small class="h2">Traditional Chinese</small>
+                </div>
+                <div class="ha">
+                    <span><button class="btn2"><a class="link" href="ue_english.exe">Download
+                                32-bit</a></button></span>
+                    <span><button class="btn3"><a class="link" href="ue_english.exe">Download
+                                64-bit</a></button></span>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </main>
+</body>
+
+</html>
